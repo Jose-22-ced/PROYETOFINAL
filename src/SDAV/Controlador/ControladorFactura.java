@@ -346,6 +346,7 @@ public class ControladorFactura extends Thread{
       private void imprimirReporteFactura(String Aguja){
         HashMap<String,Object> parametros=new HashMap(); 
         parametros.put("numFactura", Aguja);
+        parametros.put("RUTOSUBREPORTE", "SDAV/Vista/reportes/factura"); 
        try {
              ConexionBD con = new ConexionBD();
             JasperReport jr= (JasperReport) JRLoader.loadObject(getClass().getResource("/SDAV/Vista/reportes/factura/FacturasSDAV.jasper"));
@@ -363,6 +364,7 @@ public class ControladorFactura extends Thread{
             String aguja = vista.getTxtBuscarE().getText();
             Map<String, Object> parametros = new HashMap<String, Object>();
             parametros.put("numFactura", "%" + aguja + "%");
+            parametros.put("RUTOSUBREPORTE", "SDAV/Vista/reportes/factura"); 
             JasperPrint jp = JasperFillManager.fillReport(jr, parametros, con.getCon());
             JasperViewer jv = new JasperViewer(jp);
             jv.setVisible(true);
