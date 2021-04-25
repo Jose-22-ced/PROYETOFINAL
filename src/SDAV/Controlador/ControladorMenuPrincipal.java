@@ -69,20 +69,9 @@ public class ControladorMenuPrincipal extends Thread{
     public void run() {
         Thread ct = Thread.currentThread();
        while (ct==h1) {
-             
+             LocalDateTime nowTime = LocalDateTime.now();
         vis.getTxtHora().setText("" + nowTime.format(DateTimeFormatter.ofPattern("HH:mm:ss", Locale.ENGLISH)));
         vis.getTxtDIA().setText("" + nowTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
-             ModeloZona modeloz = new ModeloZona();
-            List<Zona> lista = modeloz.listarZonas("");
-            lista.stream().forEach(z -> {
-                if (z.getEstado().equals("LIBRE")) {
-                    vis.getTxtZonasDispo().setText("SI");
-                    vis.getTxtZonasDispo().setForeground(Color.GREEN);
-                }else{
-                    vis.getTxtZonasDispo().setText("NO");
-                    vis.getTxtZonasDispo().setForeground(Color.RED);
-                }
-            });
         try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -390,6 +379,7 @@ public class ControladorMenuPrincipal extends Thread{
             JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/SDAV/Vista/reportes/factura/ReporteSDAV.jasper"));
             Map<String, Object> parametros = new HashMap<String, Object>();
             parametros.put("numFactura", "%" + "" + "%");
+             parametros.put("RUTOSUBREPORTE", "SDAV/Vista/reportes/factura"); 
             JasperPrint jp = JasperFillManager.fillReport(jr, parametros, con.getCon());
             JasperViewer jv = new JasperViewer(jp);
             jv.setVisible(true);

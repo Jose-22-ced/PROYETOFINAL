@@ -275,7 +275,8 @@ import net.sf.jasperreports.view.JasperViewer;
         public void grabarauto() {
         if (vista.getTxtplaca().getText().isEmpty() || vista.getJcPropietario().getSelectedItem().toString().isEmpty() || 
              vista.getTxtmarca().getText().isEmpty() ||vista.getTxtcolor().getText().isEmpty() || vista.getJctipoV().getSelectedItem().toString().isEmpty()
-                ||vista.getJcPropietario().getSelectedItem().toString().equals("SELECCIONAR") || vista.getJctipoV().getSelectedItem().toString().equals("SELECCIONAR")) {
+                ||vista.getJcPropietario().getSelectedItem().toString().equals("SELECCIONAR") || vista.getJctipoV().getSelectedItem().toString().equals("SELECCIONAR")
+                ||vista.getLblFoto().getIcon().equals(null)) {
             JOptionPane.showMessageDialog(vista, "Llenar todos los campos requeridos");
         } else {
             vista.getBtnaceptV().setEnabled(true);

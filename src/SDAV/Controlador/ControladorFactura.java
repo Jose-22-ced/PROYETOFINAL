@@ -312,12 +312,12 @@ public class ControladorFactura extends Thread{
          ModeloFactura factura = new ModeloFactura();
          factura.setIdFactura(tcModelo.getValueAt(fila, 0).toString());
          if(factura.EliminarDetalleFactura()){
-        JOptionPane.showMessageDialog(vista, "Factura Creada con exito","AVISO",-1);  
+
          }else{
         JOptionPane.showMessageDialog(vista, "ERROR");   
         }  
          if(factura.EliminarFactura()){
-        JOptionPane.showMessageDialog(vista, "Factura Creada con exito","AVISO",-1);  
+        JOptionPane.showMessageDialog(vista, "Factura eliminada con exito","AVISO",-1);  
          }else{
         JOptionPane.showMessageDialog(vista, "ERROR");   
         }  

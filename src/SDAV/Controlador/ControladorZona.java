@@ -324,7 +324,7 @@ public class ControladorZona {
     }
       public void grabarzonav() {
         if (vista.getTextid_zona().getText().isEmpty() || vista.getTxtnombrezona().getText().isEmpty() ||  vista.getComboBoxid_tarifa().getSelectedItem().toString().isEmpty()
-            ||vista.getComboBoxid_tarifa().getSelectedItem().toString().equals("SELECCIONE")) {
+            ||vista.getComboBoxid_tarifa().getSelectedItem().toString().equals("SELECCIONE")||vista.getLabelfoto().getIcon().equals(null)) {
             JOptionPane.showMessageDialog(vista, "Llenar todos los campos requeridos");
         } else {
             vista.getBaceptar().setEnabled(true);
