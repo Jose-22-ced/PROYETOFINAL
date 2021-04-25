@@ -30,6 +30,7 @@ public List<Empleado>Listar(String aguja){
         try {
             String sql="SELECT cedula,id_cargo,nombre,apellido,email,sueldo FROM empleado WHERE ";
             sql+="UPPER(cedula) LIKE UPPER('%"+aguja+"%') OR ";
+            sql+="UPPER(id_cargo) LIKE UPPER('%"+aguja+"%') OR ";
             sql+="UPPER(nombre) LIKE UPPER('%"+aguja+"%') OR ";
             sql+="UPPER(apellido) LIKE UPPER('%"+aguja+"%')";
             
