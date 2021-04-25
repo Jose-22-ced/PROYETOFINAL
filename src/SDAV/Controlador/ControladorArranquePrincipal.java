@@ -18,6 +18,7 @@ import java.awt.event.KeyListener;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
 
 
@@ -118,6 +119,7 @@ public class ControladorArranquePrincipal {
             public void keyReleased(KeyEvent e) {
             }
         };
+        
         vap.getBt_Ingresar().addActionListener(l->InicarControlMenuPrincipal());
         vap.getBtSalir().addActionListener(l->CerrarVentana());
         vap.getJbRegistarse().addActionListener(l->Registarse());
@@ -128,6 +130,7 @@ public class ControladorArranquePrincipal {
         vap.getApellE().addKeyListener(validarnomyape);
         vap.getEmailE().addKeyListener(validarcorreo);
         vap.getSueldE().addKeyListener(validarsueldo);
+        vap.getTxt_Cedu().addKeyListener(validarcedula);
     }
     
     public void InicarControlMenuPrincipal(){
@@ -226,8 +229,7 @@ public class ControladorArranquePrincipal {
         }   
     }
     
-    
-   
+
     public void CerrarVentana(){
         System.exit(0);
     }
@@ -239,6 +241,7 @@ public class ControladorArranquePrincipal {
         vap.getJpRegistrarse().setVisible(false);
         vap.getJpInicairSesion().setVisible(true);
     }
+    
 
     
 }

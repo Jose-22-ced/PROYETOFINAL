@@ -440,15 +440,15 @@ public class ControladorNuevoTicket extends Thread{
     }
      private void cargarImagen(){
 
-            JFileChooser jfc= new JFileChooser();
-            jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            int estado=jfc.showOpenDialog(null);
-            jfc.setAcceptAllFileFilterUsed(false);
+            JFileChooser jfcs= new JFileChooser();
+            jfcs.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            jfcs.setAcceptAllFileFilterUsed(false);
             FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.PNG","*.PNG", "JPG","PNG","jfif");
-            jfc.setFileFilter(filtro);
+            jfcs.setFileFilter(filtro);
+            int estado=jfcs.showOpenDialog(null);
             if(estado==JFileChooser.APPROVE_OPTION){
                 try {
-                    Image icono = ImageIO.read(jfc.getSelectedFile()).getScaledInstance(
+                    Image icono = ImageIO.read(jfcs.getSelectedFile()).getScaledInstance(
                             vista.getLblFoto().getWidth(),
                             vista.getLblFoto().getHeight(),
                             Image.SCALE_DEFAULT
