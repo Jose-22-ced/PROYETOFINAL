@@ -37,6 +37,8 @@ public class ControladorArranquePrincipal {
         vap.setLocationRelativeTo(null);
         vap.getTxtError().setText("BIENVENIDO");
         vap.getTxtError().setForeground(new Color(51,153,0));
+        vap.getSueldE().setEnabled(false);
+        
     }
     public void InicarControl(){
          KeyListener validarcedula = new KeyListener() {
@@ -167,11 +169,11 @@ public class ControladorArranquePrincipal {
                 cmp.IniciarControl();
                 vap.setVisible(false);
                 vap.getTxtError().setText(null);
-            } else {
-                JOptionPane.showMessageDialog(vap, "No se creo","ERROR", 0);
-            }
+                } else {
+                    JOptionPane.showMessageDialog(vap, "No se creo,talves ya existe ese atministrador","ERROR", 0);
+                }
             }else{
-                JOptionPane.showMessageDialog(vap, "DECESITA EL CORREO DE ALGÚN EMPLADO ADMITRADOR","ERROR", 0);
+
 
             }     
              });

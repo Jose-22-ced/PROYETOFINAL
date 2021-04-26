@@ -319,7 +319,6 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         btEmpezar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         txtZonasDispo = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         txtDIA = new javax.swing.JLabel();
@@ -632,11 +631,6 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("NUEVO TICKET");
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ZONAS DISPONIBLES");
-
         txtZonasDispo.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         txtZonasDispo.setForeground(new java.awt.Color(255, 255, 255));
         txtZonasDispo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -647,15 +641,12 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btEmpezar, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(txtZonasDispo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(104, 104, 104)
                 .addComponent(txtZonasDispo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 291, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1202,7 +1193,6 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton bt_zonas;
     private javax.swing.JButton btnCrudFactura;
     private javax.swing.JDesktopPane dekEscritorio;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

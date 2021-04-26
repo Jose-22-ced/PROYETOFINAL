@@ -365,6 +365,7 @@ public class VistaArranquePrincipal extends javax.swing.JFrame {
         sueldE.setBackground(new java.awt.Color(240, 240, 240));
         sueldE.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         sueldE.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sueldE.setText("000.0");
         sueldE.setBorder(null);
 
         jSeparator6.setBackground(new java.awt.Color(0, 102, 255));
